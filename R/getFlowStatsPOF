@@ -1,3 +1,20 @@
+
+# function that runs new EflowStats package for each POF withdrawal scenario
+# 
+# 1) pulls daily values for each site_no and period chunk
+# 
+# 2) calculates peakflow data and floodThresholds
+#
+# 3) calculates SFCs for each POF withdrawal scenario uing calc_allHIT() and calc_magnifSeven(); transposes outputs
+# ** and automatically calcuates flowperc
+#
+# 4) Loops through each site_no and period chunk
+
+# Notes: 1) the new EflowStats package does NOT include built-in function for calculating e85
+# 2) "pref = median" should be included as an argument for calculations for "sep-med" (ma20), but this would require an additional 
+# work-around in order to do this for this 'stat' group function. **HOWEVER, neither e85 nor Sep-med are used in any
+# of the ELFs... so this should NOT be an issue with this particular analysis. 
+
 getFlowStatsPOF <- function(siteID, startDtNew, endDtNew) {
   
   dvs <- tryCatch({
