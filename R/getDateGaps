@@ -1,3 +1,5 @@
+## find continuous chunks (no missing days) in the period of record for each site
+
 getDateGaps <- function(site) {
   
   # Get the DVs or return comment if failure occurs
