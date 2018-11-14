@@ -92,7 +92,7 @@ sevQten <- function(date, flow, yearType = NULL) {
 
 ####################
 # function to calculate 7Q10 values 
-get7Q10 <- function (siteIDs) {
+cal7Q10 <- function (siteIDs) {
 	
 	sevQ10_vals <- data.frame()
 	
